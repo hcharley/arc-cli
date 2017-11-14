@@ -13,18 +13,38 @@ Install:
 pip install arc-cli
 ```
 
-Configure your settings in `~/.arcrc.json`:
+Configure your settings in `~/.arcrc.yml`:
+
+```yaml
+envs:
+    prod:
+        key: ARC_KEY=
+        url: https://api.tronc.arcpublishing.com
+    sandbox:
+        key: ARC_KEY=
+        url: https://api.sandbox.tronc.arcpublishing.com
+    stage:
+        key: ARC_KEY=
+        url: https://api.staging.tronc.arcpublishing.com
+```
+
+
+or as JSON in `~/.arcrc.json`:
 
 ```json
 {
   "envs": {
-    "stage": {
-      "url": "https://quickpost-stage.tribdev.com",
-      "key": "ABC"
+    "prod": {
+      "url": "https://api.tronc.arcpublishing.com",
+      "key": "ARC_KEY="
     },
-    "local": {
-      "url": "http://localhost:8000",
-      "key": "ZYX"
+    "sandbox": {
+      "url": "https://api.sandbox.tronc.arcpublishing.com",
+      "key": "ARC_KEY="
+    },
+    "stage": {
+      "url": "https://api.staging.tronc.arcpublishing.com",
+      "key": "ARC_KEY="
     }
   }
 }
@@ -40,27 +60,98 @@ arc lookup
 
 More to come soon!
 
-### moveblog
+### search
 
-If you need to shuffle a blog from one environment to another, you can use
-this command:
-
-```
-quickpost moveblog LIVEBLOG_ID FROM_ENV TO_ENV
-```
-
-For example, if I want to take blog 703 from stage and move it to
-a local development environment run this command (make sure the `stage` and
-`local` environments are configured in `~/.quickpost.json`):
+By default this will run a search of Arc's staging environment:
 
 ```
-quickpost moveblog 703 stage local
+arc search
 ```
 
-Turn on debugging:
+To search other environments, explicitly say which one like so:
 
 ```
-quickpost moveblog 703 stage local --debug
+arc search sandbox
+```
+
+To search using a P2P ID:
+
+```
+arc search --p2pid=1234567
+```
+
+To search just published revisions:
+
+```
+arc search --pubbed
+```
+
+To search just unpublished revisions:
+
+```
+arc search --unpubbed
+```
+
+By turning on debugging, not only do you get more information on what's
+being done over the API, but also *you can get CURLs of the requests
+being made so you can share with colleagues*:
+
+```
+arc search --debug
+```
+
+Once you start searching you'll have an interactive CLI that looks like this:
+
+```bash
+(arc-cli) web-george:arc-cli charlex$ arc search --p2pid=74234140
+Searching stage with parameters:
+	p2p_id: 	74234140
+
+  [####################################]  100%
+
+Loaded 2 of total 2 results.
+
+Results 0 to 10 results:
+[0] la-me-ln-nancy-reagan-farewell (unpublished revision)
+[1] la-me-ln-nancy-reagan-farewell (published revision)
+
+Choose result index (or input n/p for next/prev results): 1
+
+===================
+Arc item:
+
+Arc ID:
+	BQGSXV2E4ZGLFOF76FEFLHJF4M
+
+Source system:
+	Quickpost
+
+Headline:
+	Farewell to Nancy Reagan: Public gathers to pay respects
+
+Slug:
+	la-me-ln-nancy-reagan-farewell
+
+Bylines:
+	No bylines
+
+Revision is published:
+	True
+
+-------------------
+Actions:
+
+[0] Return to results
+[1] View JSON
+[2] Output to JSON file
+[3] Get URL to story API
+[4] Exit
+
+Action?: 3
+
+
+URL to story API:
+https://api.staging.tronc.arcpublishing.com/story/v2/story/BQGSXV2E4ZGLFOF76FEFLHJF4M
 ```
 
 ## Developing
@@ -74,15 +165,15 @@ cd ~/code/
 Start a virtualenv:
 
 ```
-mkvirtualenv quickpost-cli
-cd quickpost-cli
+mkvirtualenv arc-cli
+cd arc-cli
 ```
 
 or
 
 ```
-virtualenv quickpost-cli
-cd quickpost-cli
+virtualenv arc-cli
+cd arc-cli
 . bin/activate
 cd repo/
 ```
@@ -91,7 +182,7 @@ cd repo/
 Clone the repo:
 
 ```
-git clone git@diggit.trbprodcloud.com:quickpost/quickpost-cli.git .
+git clone git@diggit.trbprodcloud.com:quickpost/arc-cli.git .
 ```
 
 Install requirements:
