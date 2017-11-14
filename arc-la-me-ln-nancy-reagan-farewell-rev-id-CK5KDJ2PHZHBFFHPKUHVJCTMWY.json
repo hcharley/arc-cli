@@ -1,0 +1,146 @@
+{
+  "_id": "BQGSXV2E4ZGLFOF76FEFLHJF4M", 
+  "additional_properties": {
+    "has_published_copy": true, 
+    "liveblog_active": false
+  }, 
+  "canonical_url": "/la-me-ln-nancy-reagan-farewell-htmlstory.html", 
+  "content_elements": [
+    {
+      "_id": "VYXJSLWYDNBDFCHL5NCPQ5CEZU", 
+      "content_elements": [
+        {
+          "_id": "O6MZ4DQLPZHDNBI6SGJUEC2SPE", 
+          "content": "The Ronald Reagan Presidential Library in Simi Valley has invited the public to pay respects to former First Lady Nancy Reagan, who will lie in repose Wednesday and Thursday before her burial in a private ceremony Friday.", 
+          "type": "text"
+        }, 
+        {
+          "_id": "HFCXPRBZ3BENTI6SVDNCTN2EXE", 
+          "items": [
+            {
+              "_id": "POAPRTJVYNDM3ELO34ONXDOT7Q", 
+              "content": "<a href=\"http://www.latimes.com/local/obituaries/la-me-ln-nancy-reagan-dead-at-94-20160306-story.html\">Read the obituary: </a><a href=\"http://www.latimes.com/local/obituaries/la-me-ln-nancy-reagan-dead-at-94-20160306-story.html\">Former First Lady Nancy Reagan dies at 94</a>", 
+              "type": "text"
+            }, 
+            {
+              "_id": "B7BYDXRRLVFTBLTKTV6VSMCIXA", 
+              "content": "<a href=\"http://www.latimes.com/local/obituaries/la-nancy-reagan-die-story-gallery-20160306-storygallery.html\">Full coverage on Nancy Reagan&rsquo;s death</a><span></span>", 
+              "type": "text"
+            }
+          ], 
+          "type": "list"
+        }
+      ], 
+      "subtype": "liveblog-blurb", 
+      "type": "element_group"
+    }
+  ], 
+  "created_date": "2017-11-07T23:21:03.518Z", 
+  "description": {
+    "basic": "The Ronald Reagan Presidential Library in Simi Valley has invited the public to pay respects to former First Lady Nancy Reagan, who will lie in repose Wednesday and Thursday before her burial in a private ceremony Friday. Read the obituary:  Former First Lady Nancy Reagan dies at 94 Full coverage on Nancy Reagan\u2019s death"
+  }, 
+  "display_date": "2016-03-09T10:20:04Z", 
+  "headlines": {
+    "basic": "Farewell to Nancy Reagan: Public gathers to pay respects"
+  }, 
+  "last_updated_date": "2017-11-07T23:27:03.872Z", 
+  "owner": {
+    "id": "staging.tronc"
+  }, 
+  "publish_date": "2016-03-09T19:23:00Z", 
+  "revision": {
+    "branch": "default", 
+    "parent_id": "KEH4DD4UDBHP7FVX4EX2D2GSBE", 
+    "published": false, 
+    "revision_id": "CK5KDJ2PHZHBFFHPKUHVJCTMWY"
+  }, 
+  "slug": "la-me-ln-nancy-reagan-farewell", 
+  "source": {
+    "additional_properties": {
+      "article_type": "simple", 
+      "group_code": "stories", 
+      "origin": {
+        "id": "latimes"
+      }
+    }, 
+    "name": "Los Angeles Times", 
+    "source_id": "74234140", 
+    "system": "Quickpost"
+  }, 
+  "status": "published", 
+  "subtype": "liveblog-parent-topic", 
+  "taxonomy": {
+    "primary_site": {
+      "_id": "/la-times/politics/essential", 
+      "additional_properties": {
+        "original": {
+          "Ad_IDs": {
+            "dfp_id": "news/politics"
+          }, 
+          "Display": {
+            "site_color": null, 
+            "site_logo_image": null
+          }, 
+          "_admin": {
+            "alias_ids": [
+              "/la-times/politics/essential"
+            ]
+          }, 
+          "_id": "/la-times/politics/essential", 
+          "ancestors": [
+            "/la-times", 
+            "/la-times/politics"
+          ], 
+          "inactive": false, 
+          "name": "Essential Politics", 
+          "navigation": {
+            "nav_title": null
+          }, 
+          "order": 940, 
+          "parent": "/la-times/politics", 
+          "site": {
+            "site_about": null, 
+            "site_description": null, 
+            "site_tagline": null, 
+            "site_title": null, 
+            "site_url": "/politics/essential"
+          }, 
+          "social": {
+            "facebook": null, 
+            "rss": null, 
+            "twitter": null
+          }, 
+          "video": {
+            "video_playlist": "/politics/la-politics-video-playlist-premiumvideoplaylist.html"
+          }
+        }
+      }, 
+      "description": null, 
+      "name": "Essential Politics", 
+      "parent_id": "/la-times/politics", 
+      "path": "/la-times/politics/essential", 
+      "type": "site", 
+      "version": "0.5.8"
+    }, 
+    "sites": [
+      {
+        "referent": {
+          "id": "/chinews/", 
+          "provider": "", 
+          "type": "site"
+        }, 
+        "type": "reference"
+      }, 
+      {
+        "referent": {
+          "id": "/la-times/", 
+          "provider": "", 
+          "type": "site"
+        }, 
+        "type": "reference"
+      }
+    ]
+  }, 
+  "type": "story", 
+  "version": "0.5.8"
+}

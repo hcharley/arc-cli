@@ -1,0 +1,9 @@
+certifi==2017.11.5
+chardet==3.0.4
+click==6.7
+click-log==0.2.1
+idna==2.6
+python-slugify==1.2.4
+requests==2.18.4
+Unidecode==0.4.21
+urllib3==1.22
