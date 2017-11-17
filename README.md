@@ -82,6 +82,13 @@ To search using a P2P ID:
 arc search --p2pid=1234567
 ```
 
+
+To search using a URL, even with weird querystrings or hashs:
+
+```
+arc search --url=http://beta.latimes.com/politics/la-na-alabama-moore-suburbs-20171117-story.html#nt=oft12aH-1gp2
+```
+
 To search using a canonical URL:
 
 ```
