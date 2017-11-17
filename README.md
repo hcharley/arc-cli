@@ -82,6 +82,18 @@ To search using a P2P ID:
 arc search --p2pid=1234567
 ```
 
+To search using a canonical URL:
+
+```
+arc search --canonical-url=/politics/la-na-alabama-moore-suburbs-20171117-story.html
+```
+
+or short-hand:
+
+```
+arc search -c /politics/la-na-alabama-moore-suburbs-20171117-story.html
+```
+
 To search just published revisions:
 
 ```
