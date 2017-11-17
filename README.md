@@ -2,6 +2,8 @@
 
 A command line interface for interacting with the Arc APIs.
 
+[Demo video.](https://drive.google.com/file/d/1boj7cuBdljo1jbWRaNLSuC2ZWlGwihXg/view?usp=sharing)
+
 ## Getting started
 
 **Note: I haven't uploaded to PyPi yet. Please see the [development](#developing)
