@@ -1,6 +1,8 @@
 # arc-cli
 
-A command line interface for interacting with the Arc APIs.
+A command line interface for interacting with the Arc APIs. Built using the open source [Click](http://click.pocoo.org/5/) python library.
+
+[Demo video.](https://drive.google.com/file/d/1Yam6KXjcLXykq_JO411-d5Z9syjNvBrh/view?usp=sharing)
 
 ## Getting started
 
@@ -78,6 +80,25 @@ To search using a P2P ID:
 
 ```
 arc search --p2pid=1234567
+```
+
+
+To search using a URL, even with weird querystrings or hashs:
+
+```
+arc search --url=http://beta.latimes.com/politics/la-na-alabama-moore-suburbs-20171117-story.html#nt=oft12aH-1gp2
+```
+
+To search using a canonical URL:
+
+```
+arc search --canonical-url=/politics/la-na-alabama-moore-suburbs-20171117-story.html
+```
+
+or short-hand:
+
+```
+arc search -c /politics/la-na-alabama-moore-suburbs-20171117-story.html
 ```
 
 To search just published revisions:
