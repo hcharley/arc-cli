@@ -49,6 +49,13 @@ class Arc():
               }
             })
 
+        if params.get('canonical_url'):
+            payload['query']['bool']['must'].append({
+              "match": {
+                "canonical_url": params.get('canonical_url')
+              }
+            })
+
         status = params.get('published', None)
         if type(status) == bool:
             payload['query']['bool']['must'].append({

@@ -4,6 +4,7 @@ import click
 import pprint
 import logging
 import requests
+import urlparse
 import click_log
 from random import randint
 from slugify import slugify
@@ -23,13 +24,15 @@ click_log.basic_config(logger)
 @click.command()
 @click.argument('env_name', default='stage', type=str)
 @click.option('--p2pid', type=str)
+@click.option('--canonical-url', '-c', type=str)
+@click.option('--url', '-u', type=str)
 @click.option('--pubbed/--unpubbed', default=None)
 @click.option('--pretty/--raw', default=True)
 @click.option('--debug/--no-debug', default=False)
 @click.pass_context
-def search(cntx, env_name, p2pid, pubbed, pretty, debug):
+def search(cntx, env_name, p2pid, canonical_url, url, pubbed, pretty, debug):
     """
-    Move a blog from an environment
+    Search the Arc Content API
     """
     if debug:
         logger.setLevel(logging.DEBUG)
@@ -44,6 +47,11 @@ def search(cntx, env_name, p2pid, pubbed, pretty, debug):
     # P2P ID
     if p2pid:
         params['p2p_id'] =  p2pid
+
+    if canonical_url:
+        params['canonical_url'] = canonical_url
+    elif url:
+        params['canonical_url'] = urlparse.urlparse(url).path
 
     # Published
     if type(pubbed) == bool:
@@ -147,7 +155,7 @@ def search(cntx, env_name, p2pid, pubbed, pretty, debug):
 
         def show_actions():
             if selected_el.get('credits', {}).get('by'):
-                bylines = ', '.join([b.name for b in selected_el['credits']['by']])
+                bylines = ', '.join([b.get('name') for b in selected_el['credits']['by']])
             else:
                 bylines = 'No bylines'
 
