@@ -2,7 +2,7 @@
 
 A command line interface for interacting with the Arc APIs. Built using the open source [Click](http://click.pocoo.org/5/) python library.
 
-[Demo video.](https://drive.google.com/file/d/1boj7cuBdljo1jbWRaNLSuC2ZWlGwihXg/view?usp=sharing)
+[Demo video.](https://drive.google.com/file/d/1Yam6KXjcLXykq_JO411-d5Z9syjNvBrh/view?usp=sharing)
 
 ## Getting started
 
